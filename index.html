@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            font-size: 24px;
+            font-weight: bold;
+            background: skyblue;
+            overflow: hidden;
+        }
+        .cloud {
+            position: absolute;
+            background: white;
+            width: 100px;
+            height: 60px;
+            border-radius: 50px;
+            box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.1);
+            animation: moveClouds 10s linear infinite;
+        }
+        .cloud::before, .cloud::after {
+            content: '';
+            position: absolute;
+            background: white;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+        }
+        .cloud::before {
+            top: -40px;
+            left: 20px;
+        }
+        .cloud::after {
+            top: -20px;
+            right: 20px;
+        }
+        @keyframes moveClouds {
+            from { transform: translateX(-150%); }
+            to { transform: translateX(150%); }
+        }
+        .message {
+            position: relative;
+            z-index: 2;
+        }
+    </style>
+</head>
+<body>
+    <div class="message">THANK YOU FOR YOUR ATTENTION ☁️</div>
+    <div class="cloud" style="top: 20%; left: -10%; animation-duration: 12s;"></div>
+    <div class="cloud" style="top: 50%; left: -15%; animation-duration: 15s;"></div>
+    <div class="cloud" style="top: 80%; left: -5%; animation-duration: 18s;"></div>
+</body>
+</html>
